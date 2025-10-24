@@ -15,10 +15,15 @@ With the data structured in MySQL, I could perform powerful business intelligenc
 
 3. The Model: Jupyter & Scikit-learn
 This is where the data science comes in. The Crime Analysis and Prediction.ipynb notebook connects to the same MySQL database to pull the data for modeling.
+
 The workflow inside the notebook includes:
+
 Data Cleaning: Handling missing values and formatting data for analysis.
+
 Exploratory Data Analysis (EDA): Using Python libraries like Seaborn and Plotly to create interactive maps and charts that revealed patterns in the data.
+
 Feature Engineering: Selecting the most important features for prediction. The key predictors for this model are Latitude and Longitude.
+
 Multilabel Prediction: Building a machine learning model to predict the specific type of crime that might occur at a given location.
 
 🧠 A Key Challenge: Improving Model Accuracy
