@@ -129,11 +129,11 @@ Follow these steps to reproduce the analysis.
 git clone https://github.com/prathamehaphale-007/Crime-Analysis-and-Prediction.git
 cd Crime-Analysis-and-Prediction
 ```
-2️⃣ Install Dependencies
+## 2️⃣ Install Dependencies
 ```
 pip install pandas numpy scikit-learn matplotlib seaborn plotly mysql-connector-python
 ```
-3️⃣ Setup MySQL Database
+## 3️⃣ Setup MySQL Database
 
 Create a database and import the crime dataset.
 
@@ -150,7 +150,7 @@ date DATE
 ```
 Import the CSV dataset into this table.
 
-4️⃣ Run the Jupyter Notebook
+## 4️⃣ Run the Jupyter Notebook
 
 Launch Jupyter:
 
@@ -162,94 +162,94 @@ crime_analysis_prediction.ipynb
 
 Run all cells to reproduce the analysis and model training.
 
-📊 Exploratory Data Analysis
+# 📊 Exploratory Data Analysis
 
 The notebook performs several EDA steps to understand crime patterns.
 
-🔎 Crime Distribution
+# 🔎 Crime Distribution
 
 Crime occurrences are highly concentrated in specific geographic hotspots.
 
-📍 Location-Based Analysis
+# 📍 Location-Based Analysis
 
 Latitude and longitude were the most predictive features for crime classification.
 
-📈 Crime Category Distribution
+# 📈 Crime Category Distribution
 
 Certain crimes occur significantly more frequently than others, creating class imbalance in the dataset.
 
-🧠 Model Improvement Challenge
+# 🧠 Model Improvement Challenge
 
 During initial experiments, the model showed low predictive accuracy.
 
-Problem
+- Problem
 
-The dataset had class imbalance, where common crimes (such as theft) dominated the dataset while rarer crimes had very few examples.
+- The dataset had class imbalance, where common crimes (such as theft) dominated the dataset while rarer crimes had very few examples.
 
-This caused the model to heavily favor majority classes.
+- This caused the model to heavily favor majority classes.
 
-Solution
+- Solution
 
 Similar rare crime categories were grouped into broader categories.
 
-Example:
+- Example:
 
-Public nuisance merged into Public Order
+- Public nuisance merged into Public Order
 
 This increased the training data available for each category.
 
-Result
+- Result
 
-Improved F1-score
+- Improved F1-score
 
-Better prediction fairness across crime categories
+- Better prediction fairness across crime categories
 
-More reliable model performance
+- More reliable model performance
 
-📊 Power BI Dashboard
+# 📊 Power BI Dashboard
 
 The Power BI dashboard provides visual exploration of the dataset.
 
-Dashboard Insights
+- Dashboard Insights
 
-Crime hotspots across geographic locations
+- Crime hotspots across geographic locations
 
-Distribution of crime categories
+- Distribution of crime categories
 
-Crime outcome analysis
+- Crime outcome analysis
 
-Temporal crime trends
+- Temporal crime trends
 
-📌 Key Insights
+# 📌 Key Insights
 
-Geographic location strongly influences crime type prediction.
+- Geographic location strongly influences crime type prediction.
 
-Crime datasets often suffer from class imbalance.
+- Crime datasets often suffer from class imbalance.
 
-Data preprocessing significantly improves model reliability.
+- Data preprocessing significantly improves model reliability.
 
-Combining database storage + BI dashboards + ML modeling creates a powerful data pipeline.
+- Combining database storage + BI dashboards + ML modeling creates a powerful data pipeline.
 
-🔮 Future Improvements
+# 🔮 Future Improvements
 
-Possible enhancements for this project:
+- Possible enhancements for this project:
 
-Real-time crime data ingestion pipeline
+- Real-time crime data ingestion pipeline
 
-Crime hotspot forecasting using time-series models
+- Crime hotspot forecasting using time-series models
 
-Integration with GIS mapping tools
+- Integration with GIS mapping tools
 
-Deep learning models for improved prediction accuracy
+- Deep learning models for improved prediction accuracy
 
-Automated data pipeline using Apache Airflow
+- Automated data pipeline using Apache Airflow
 
-👨‍💻 Author
+# 👨‍💻 Author
 
-Prathmesh Aphale
+## Prathmesh Aphale
 
-Data Analytics | Data Engineering | AI & Machine Learning
+### Data Analytics | Data Engineering | AI & Machine Learning
 
-⭐ Support
+# ⭐ Support
 
-If you found this project useful, consider giving the repository a star ⭐.
+### If you found this project useful, consider giving the repository a star ⭐.
