@@ -65,7 +65,7 @@ The model performs **multilabel classification** to estimate crime categories ba
 
 # 🧱 Project Architecture
 
-
+```
 Crime Dataset (CSV)
 ↓
 MySQL Database (Structured Storage)
@@ -77,7 +77,7 @@ Jupyter Notebook (EDA + Feature Engineering)
 Scikit-learn Machine Learning Model
 ↓
 Crime Type Prediction
-
+```
 
 ---
 
