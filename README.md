@@ -12,8 +12,6 @@ The project demonstrates a **complete data pipeline** integrating **MySQL databa
 
 ---
 
-<img width="1024" height="1536" alt="Crime Analysis and Prediction Tracker Architecture Diagram" src="https://github.com/user-attachments/assets/cc64850f-210e-415f-b4b4-aca858703ed7" />
-
 # 🌟 Key Features
 
 ### 📊 Crime Pattern Analysis
@@ -64,6 +62,12 @@ The model performs **multilabel classification** to estimate crime categories ba
 ---
 
 # 🧱 Project Architecture
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/cc64850f-210e-415f-b4b4-aca858703ed7" 
+       alt="Crime Analysis and Prediction System Architecture"
+       width="700">
+</p>
 
 ```
 Crime Dataset (CSV)
