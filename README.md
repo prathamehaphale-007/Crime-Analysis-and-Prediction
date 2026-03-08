@@ -1,43 +1,255 @@
-# Crime-Analysis-and-Prediction
-This repository documents an end-to-end data science project, taking raw Cleveland crime data from a CSV file to a fully functional predictive model.
+# 🚔 Crime Analysis & Prediction System
 
-The core of this project was to build a complete data pipeline: ingesting data into a MySQL database, visualizing it with Power BI, and then training a multilabel machine learning model in a Jupyter Notebook to predict crime types based on their location.
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
+![MySQL](https://img.shields.io/badge/Database-MySQL-orange)
+![PowerBI](https://img.shields.io/badge/Visualization-PowerBI-yellow)
+![ScikitLearn](https://img.shields.io/badge/MachineLearning-Scikit--Learn-green)
+![DataScience](https://img.shields.io/badge/Domain-Data%20Science-red)
 
-🚀 Project Workflow
-This project was built in three main stages, connecting a database, a business intelligence tool, and a machine learning notebook.
-1. The Database: MySQL
-It all started with the data. I downloaded the raw Cleveland crime dataset from the official UK government site (data.gov.uk). Instead of just loading the CSV into a notebook, I built a more robust solution:
-I set up a MySQL server and designed a table schema to hold the crime data.
-The raw CSV data was then imported into this SQL table, creating a single, reliable source of truth.
+**Crime Analysis & Prediction** is an end-to-end data science project that transforms raw crime data into actionable insights and predictive intelligence.
 
-2. The Dashboard: Power BI
-With the data structured in MySQL, I could perform powerful business intelligence analysis. I established a live connection from Power BI directly to the MySQL database. I built several interactive dashboards to slice and dice the data, uncovering hotspots, visualizing crime trends over time, and analyzing crime outcomes. This EDA step was crucial for understanding the data before any modeling.
+The project demonstrates a **complete data pipeline** integrating **MySQL database management, Power BI dashboards, and machine learning models built using Python and Scikit-learn** to analyze crime patterns and predict crime types based on geographic location.
 
-3. The Model: Jupyter & Scikit-learn
-This is where the data science comes in. The Crime Analysis and Prediction.ipynb notebook connects to the same MySQL database to pull the data for modeling.
+---
 
-The workflow inside the notebook includes:
+<img width="1024" height="1536" alt="Crime Analysis and Prediction Tracker Architecture Diagram" src="https://github.com/user-attachments/assets/cc64850f-210e-415f-b4b4-aca858703ed7" />
 
-Data Cleaning: Handling missing values and formatting data for analysis.
+# 🌟 Key Features
 
-Exploratory Data Analysis (EDA): Using Python libraries like Seaborn and Plotly to create interactive maps and charts that revealed patterns in the data.
+### 📊 Crime Pattern Analysis
 
-Feature Engineering: Selecting the most important features for prediction. The key predictors for this model are Latitude and Longitude.
+Analyze crime trends using historical crime records including:
 
-Multilabel Prediction: Building a machine learning model to predict the specific type of crime that might occur at a given location.
+- Crime distribution by location  
+- Crime frequency patterns  
+- Crime outcome analysis  
+- Crime trend visualization over time  
 
-🧠 A Key Challenge: Improving Model Accuracy
-During the first model tests, I noticed the accuracy wasn't great. The model was heavily biased toward the most common crime types (like 'Theft') and failed to predict rarer, but important, crimes. This is a classic class imbalance problem.
-The Solution: Instead of just accepting the low score, I went back into the notebook and strategically grouped similar, rare crime categories into larger buckets. For example, 'Public nuisance' was merged into the 'Public order' category.
-This simple, logical step gave the model more data to learn from for each category. As a result, the model's F1-score and overall fairness improved significantly, making it much more reliable. You can see this entire process in the notebook's value_counts() and replace() sections.
+---
 
-🛠️ Tech Stack
-Database: MySQL
+### 🗄️ Structured Data Pipeline
 
-Business Intelligence: Power BI
+Instead of analyzing raw CSV files directly, the project implements a **database-driven workflow**:
 
-Data Analysis & ML: Python (Pandas, NumPy, Scikit-learn)
+- Raw crime dataset imported into **MySQL**
+- Structured schema design for reliable data storage
+- Centralized data source for analysis and modeling
 
-Data Visualization: Matplotlib, Seaborn, Plotly
+---
 
-Environment: Jupyter Notebook
+### 📈 Interactive Data Visualization
+
+Power BI dashboards provide insights into crime patterns including:
+
+- Crime hotspots by geographic location  
+- Crime trends over time  
+- Distribution of crime types  
+- Outcome analysis  
+
+This **Exploratory Data Analysis (EDA)** stage helps identify meaningful patterns before building predictive models.
+
+---
+
+### 🤖 Machine Learning Prediction
+
+A machine learning model predicts the **type of crime likely to occur at a given location**.
+
+Key predictors include:
+
+- Latitude  
+- Longitude  
+
+The model performs **multilabel classification** to estimate crime categories based on geographic features.
+
+---
+
+# 🧱 Project Architecture
+
+
+Crime Dataset (CSV)
+↓
+MySQL Database (Structured Storage)
+↓
+Power BI Dashboard (Exploratory Analysis)
+↓
+Jupyter Notebook (EDA + Feature Engineering)
+↓
+Scikit-learn Machine Learning Model
+↓
+Crime Type Prediction
+
+
+---
+
+# 🛠️ Technology Stack
+
+| Technology | Purpose |
+|-----------|--------|
+| **MySQL** | Structured data storage |
+| **Python (Pandas, NumPy)** | Data cleaning & analysis |
+| **Scikit-learn** | Machine learning model development |
+| **Matplotlib / Seaborn / Plotly** | Data visualization |
+| **Power BI** | Business intelligence dashboard |
+| **Jupyter Notebook** | Data science experimentation |
+
+---
+
+# 📂 Project Structure
+
+
+Crime-Analysis-and-Prediction/
+│
+├── notebooks/
+│ └── crime_analysis_prediction.ipynb
+│
+├── data/
+│ └── cleveland_crime_dataset.csv
+│
+├── database/
+│ └── mysql_schema.sql
+│
+├── dashboard/
+│ └── crime_dashboard.pbix
+│
+├── images/
+│ └── crime_hotspot_visualization.png
+│
+└── README.md
+
+
+---
+
+# 🚀 Installation & Setup
+
+Follow these steps to reproduce the analysis.
+
+## 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/prathamehaphale-007/Crime-Analysis-and-Prediction.git
+cd Crime-Analysis-and-Prediction
+```
+2️⃣ Install Dependencies
+```
+pip install pandas numpy scikit-learn matplotlib seaborn plotly mysql-connector-python
+```
+3️⃣ Setup MySQL Database
+
+Create a database and import the crime dataset.
+
+Example schema:
+```
+CREATE TABLE crimes (
+id INT PRIMARY KEY,
+crime_type VARCHAR(100),
+latitude FLOAT,
+longitude FLOAT,
+crime_outcome VARCHAR(100),
+date DATE
+);
+```
+Import the CSV dataset into this table.
+
+4️⃣ Run the Jupyter Notebook
+
+Launch Jupyter:
+
+jupyter notebook
+
+Open:
+
+crime_analysis_prediction.ipynb
+
+Run all cells to reproduce the analysis and model training.
+
+📊 Exploratory Data Analysis
+
+The notebook performs several EDA steps to understand crime patterns.
+
+🔎 Crime Distribution
+
+Crime occurrences are highly concentrated in specific geographic hotspots.
+
+📍 Location-Based Analysis
+
+Latitude and longitude were the most predictive features for crime classification.
+
+📈 Crime Category Distribution
+
+Certain crimes occur significantly more frequently than others, creating class imbalance in the dataset.
+
+🧠 Model Improvement Challenge
+
+During initial experiments, the model showed low predictive accuracy.
+
+Problem
+
+The dataset had class imbalance, where common crimes (such as theft) dominated the dataset while rarer crimes had very few examples.
+
+This caused the model to heavily favor majority classes.
+
+Solution
+
+Similar rare crime categories were grouped into broader categories.
+
+Example:
+
+Public nuisance merged into Public Order
+
+This increased the training data available for each category.
+
+Result
+
+Improved F1-score
+
+Better prediction fairness across crime categories
+
+More reliable model performance
+
+📊 Power BI Dashboard
+
+The Power BI dashboard provides visual exploration of the dataset.
+
+Dashboard Insights
+
+Crime hotspots across geographic locations
+
+Distribution of crime categories
+
+Crime outcome analysis
+
+Temporal crime trends
+
+📌 Key Insights
+
+Geographic location strongly influences crime type prediction.
+
+Crime datasets often suffer from class imbalance.
+
+Data preprocessing significantly improves model reliability.
+
+Combining database storage + BI dashboards + ML modeling creates a powerful data pipeline.
+
+🔮 Future Improvements
+
+Possible enhancements for this project:
+
+Real-time crime data ingestion pipeline
+
+Crime hotspot forecasting using time-series models
+
+Integration with GIS mapping tools
+
+Deep learning models for improved prediction accuracy
+
+Automated data pipeline using Apache Airflow
+
+👨‍💻 Author
+
+Prathmesh Aphale
+
+Data Analytics | Data Engineering | AI & Machine Learning
+
+⭐ Support
+
+If you found this project useful, consider giving the repository a star ⭐.
