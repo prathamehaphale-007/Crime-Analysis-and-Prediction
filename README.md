@@ -96,7 +96,7 @@ Crime Type Prediction
 
 # 📂 Project Structure
 
-
+```
 Crime-Analysis-and-Prediction/
 │
 ├── notebooks/
@@ -115,7 +115,7 @@ Crime-Analysis-and-Prediction/
 │ └── crime_hotspot_visualization.png
 │
 └── README.md
-
+```
 
 ---
 
