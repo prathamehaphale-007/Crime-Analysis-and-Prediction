@@ -182,23 +182,23 @@ Certain crimes occur significantly more frequently than others, creating class i
 
 During initial experiments, the model showed low predictive accuracy.
 
-- Problem
+Problem
 
 - The dataset had class imbalance, where common crimes (such as theft) dominated the dataset while rarer crimes had very few examples.
 
 - This caused the model to heavily favor majority classes.
 
-- Solution
+Solution
 
 Similar rare crime categories were grouped into broader categories.
 
-- Example:
+Example:
 
 - Public nuisance merged into Public Order
 
 This increased the training data available for each category.
 
-- Result
+Result
 
 - Improved F1-score
 
